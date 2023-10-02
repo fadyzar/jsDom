@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible"
+content="IE=edge" />
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0" />
+<title>Document</title>
+</head>
+<body>
+<h1>Header</h1>
+<p>Paragraph</p>
+<a href="#">link</a>
+<img src="" alt="" />
+<div class="x">Div with a class</div>
+<div id="y">Div with an id</div>
+<input type="text" />
+<input type="text" />
+<input type="text" />
+</body>
+<script>
+
+const getId = document.getElementById('y')
+console.log(getId)
+console.dir(getId)
+
+const getClass = document.getElementsByClassName('x')
+console.log(getClass)
+
+const getPra = document.getElementsByTagName('p')
+console.log(getPra)
+
+const getInput = document.getElementsByTagName('input')
+console.log(getInput)
+console.log(getInput[0])
+
+const getH1 = document.getElementsByTagName('h1')
+console.log(getH1)
+
+const getLink = document.getElementsByTagName('a')
+console.log(getLink)
+
+const getImg = document.getElementsByTagName('img')
+console.log(getImg)
+
+
+//Select all elements using querySelector method.
+const queryId = document.querySelectorAll('#y')
+const queryClass = document.querySelectorAll('.x')
+const queryH1 = document.querySelectorAll('h1')
+const queryInput = document.querySelectorAll('input')
+const queryLink = document.querySelectorAll('a')
+const queryImg = document.querySelectorAll('img')
+
+console.log(queryClass)
+console.log(queryH1)
+console.log(queryId)
+console.log(queryImg)
+console.log(queryInput)
+console.log(queryLink)
+
+
+
+//3. Select all inputs and iterate over them with the forEach
+// method and print each one to the console. Using both
+// querySelectorAll and getElementsByTagName.
+
+const inputLoop = queryInput.forEach(element => {
+    console.log(element)
+});
+
+
+let inputs2 = document.getElementsByTagName('input')
+
+let array = Array.from(inputs2);
+   
+array.forEach((loop) => console.log(loop)
+);
+
+
+</script>
+</html>
